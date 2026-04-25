@@ -1,0 +1,1831 @@
+﻿QDialog#LoginDialog {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 1,
+                                      stop: 0 #dff3e5,
+                                      stop: 0.5 #f5fbf7,
+                                      stop: 1 #d8eedf);
+}
+
+QDialog#RegisterDialog {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 1,
+                                      stop: 0 #dff3e5,
+                                      stop: 0.5 #f5fbf7,
+                                      stop: 1 #d8eedf);
+}
+
+#ResetDialog {
+    background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 1,
+                                stop: 0 #ffdcbf,
+                                stop: 0.5 #ffeddc,
+                                stop: 1 #ffd4ad);
+}
+
+#login_card {
+    background-color: rgba(255, 255, 255, 244);
+    border: 1px solid rgba(180, 214, 191, 0.75);
+    border-radius: 26px;
+}
+
+#register_card,
+#success_card {
+    background-color: rgba(255, 255, 255, 244);
+    border: 1px solid rgba(180, 214, 191, 0.75);
+    border-radius: 26px;
+}
+
+#reset_card {
+    background-color: rgba(255, 255, 255, 244);
+    border: 1px solid rgba(244, 206, 184, 0.95);
+    border-radius: 26px;
+}
+
+#LoginDialog QLabel {
+    background: transparent;
+}
+
+#RegisterDialog QLabel {
+    background: transparent;
+}
+
+#ResetDialog QLabel {
+    background: transparent;
+}
+
+#head_widget {
+    background: transparent;
+    border: none;
+    border-radius: 52px;
+}
+
+#head_label {
+    background: transparent;
+}
+
+#title_label {
+    color: #2d5a3d;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Microsoft YaHei';
+    margin-top: 0px;
+}
+
+#subtitle_label {
+    color: transparent;
+    font-size: 1px;
+    max-height: 0px;
+}
+
+#user_label,#pass_label{
+   color:black;
+}
+
+#err_tip[state='normal']{
+   color: green;
+}
+
+#err_tip[state='err']{
+   color: red;
+}
+
+
+#pass_visible[state='unvisible']{
+   border-image: url(:/res/unvisible.png);
+}
+
+#pass_visible[state='unvisible_hover']{
+   border-image: url(:/res/unvisible_hover.png);
+}
+
+#pass_visible[state='visible']{
+   border-image: url(:/res/visible.png);
+}
+
+#pass_visible[state='visible_hover']{
+   border-image: url(:/res/visible_hover.png);
+}
+
+#LoginDialog #pass_visible[state='unvisible'],
+#LoginDialog #pass_visible[state='visible'] {
+    background: transparent;
+    padding: 2px;
+}
+
+#LoginDialog #pass_visible[state='unvisible_hover'],
+#LoginDialog #pass_visible[state='visible_hover'] {
+    background: rgba(160, 207, 176, 0.2);
+    border-radius: 11px;
+    padding: 2px;
+}
+
+
+#confirm_visible[state='unvisible']{
+   border-image: url(:/res/unvisible.png);
+}
+
+#confirm_visible[state='unvisible_hover']{
+   border-image: url(:/res/unvisible_hover.png);
+}
+
+#confirm_visible[state='visible']{
+   border-image: url(:/res/visible.png);
+}
+
+#confirm_visible[state='visible_hover']{
+   border-image: url(:/res/visible_hover.png);
+}
+
+#tip_lb, #tip2_lb{
+    color:green;
+}
+
+#forget_label[state='normal'],#forget_label[state='selected']{
+    color:black;
+}
+
+#forget_label[state='hover'], #forget_label[state='selected_hover']{
+    color: rgb(42, 112, 241);
+}
+
+#LoginDialog #email_lb,
+#LoginDialog #pass_label {
+    color: #4d725d;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Microsoft YaHei';
+    padding-left: 2px;
+}
+
+#LoginDialog #email_edit,
+#LoginDialog #pass_edit {
+    color: #244131;
+    selection-background-color: #b9dec4;
+    font-size: 13px;
+    font-family: 'Microsoft YaHei';
+}
+
+#LoginDialog #email_edit::placeholder,
+#LoginDialog #pass_edit::placeholder {
+    color: #97b4a1;
+}
+
+#pass_row {
+    background: transparent;
+}
+
+#LoginDialog #err_tip {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 12px;
+    font-family: 'Microsoft YaHei';
+    min-height: 28px;
+    max-height: 28px;
+    padding: 0 8px;
+    margin: 0 0 2px 0;
+}
+
+#LoginDialog #err_tip:empty {
+    border: none;
+    background: transparent;
+    color: transparent;
+}
+
+#LoginDialog #err_tip[state='empty'] {
+    border: none;
+    background: transparent;
+    color: transparent;
+}
+
+#LoginDialog #err_tip[state='normal'] {
+    color: #2f8f5b;
+    border: 1px solid rgba(47, 143, 91, 0.18);
+    background: rgba(235, 248, 240, 0.9);
+}
+
+#LoginDialog #err_tip[state='err'] {
+    color: #cb5a4d;
+    border: 1px solid rgba(203, 90, 77, 0.18);
+    background: rgba(255, 241, 239, 0.92);
+}
+
+#LoginDialog #forget_label[state='normal'],
+#LoginDialog #forget_label[state='selected'] {
+    color: #6b9278;
+    font-size: 12px;
+    font-family: 'Microsoft YaHei';
+}
+
+#LoginDialog #forget_label[state='hover'],
+#LoginDialog #forget_label[state='selected_hover'] {
+    color: #4f9a69;
+}
+
+#LoginDialog #login_btn,
+#LoginDialog #reg_btn {
+    font-size: 14px;
+    font-family: 'Microsoft YaHei';
+    border-radius: 14px;
+}
+
+#RegisterDialog #register_title {
+    color: #2d5a3d;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Microsoft YaHei';
+    margin-top: 2px;
+}
+
+#RegisterDialog #register_subtitle {
+    color: #7b9a87;
+    font-size: 12px;
+    font-family: 'Microsoft YaHei';
+    margin-bottom: 2px;
+}
+
+#RegisterDialog #user_label,
+#RegisterDialog #email_label,
+#RegisterDialog #pass_label,
+#RegisterDialog #confirm_label,
+#RegisterDialog #varify_label {
+    color: #4d725d;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Microsoft YaHei';
+    padding-left: 2px;
+}
+
+#RegisterDialog #user_edit,
+#RegisterDialog #email_edit,
+#RegisterDialog #pass_edit,
+#RegisterDialog #confirm_edit,
+#RegisterDialog #varify_edit {
+    color: #244131;
+    selection-background-color: #b9dec4;
+    font-size: 13px;
+    font-family: 'Microsoft YaHei';
+}
+
+#RegisterDialog #user_edit::placeholder,
+#RegisterDialog #email_edit::placeholder,
+#RegisterDialog #pass_edit::placeholder,
+#RegisterDialog #confirm_edit::placeholder,
+#RegisterDialog #varify_edit::placeholder {
+    color: #97b4a1;
+}
+
+#RegisterDialog #user_row,
+#RegisterDialog #email_row,
+#RegisterDialog #pass_row,
+#RegisterDialog #confirm_row,
+#RegisterDialog #verify_row {
+    background: transparent;
+}
+
+#RegisterDialog #err_tip {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 12px;
+    font-family: 'Microsoft YaHei';
+    min-height: 28px;
+    max-height: 28px;
+    padding: 0 8px;
+    margin: 0 0 2px 0;
+}
+
+#RegisterDialog #err_tip:empty,
+#RegisterDialog #err_tip[state='empty'] {
+    border: none;
+    background: transparent;
+    color: transparent;
+}
+
+#RegisterDialog #err_tip[state='normal'] {
+    color: #2f8f5b;
+    border: 1px solid rgba(47, 143, 91, 0.18);
+    background: rgba(235, 248, 240, 0.9);
+}
+
+#RegisterDialog #err_tip[state='err'] {
+    color: #cb5a4d;
+    border: 1px solid rgba(203, 90, 77, 0.18);
+    background: rgba(255, 241, 239, 0.92);
+}
+
+#RegisterDialog #pass_visible[state='unvisible'],
+#RegisterDialog #confirm_visible[state='unvisible'],
+#RegisterDialog #pass_visible[state='visible'],
+#RegisterDialog #confirm_visible[state='visible'] {
+    background: transparent;
+    padding: 2px;
+}
+
+#RegisterDialog #pass_visible[state='unvisible_hover'],
+#RegisterDialog #confirm_visible[state='unvisible_hover'],
+#RegisterDialog #pass_visible[state='visible_hover'],
+#RegisterDialog #confirm_visible[state='visible_hover'] {
+    background: rgba(160, 207, 176, 0.2);
+    border-radius: 9px;
+    padding: 2px;
+}
+
+#RegisterDialog #sure_btn,
+#RegisterDialog #cancel_btn,
+#RegisterDialog #return_btn {
+    font-size: 14px;
+    font-family: 'Microsoft YaHei';
+    border-radius: 14px;
+}
+
+#RegisterDialog #get_code {
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei';
+}
+
+#RegisterDialog #sure_btn,
+#RegisterDialog #return_btn {
+    background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
+                                stop: 0 #8ec8a0,
+                                stop: 1 #6faf84);
+    color: #ffffff;
+    border: none;
+}
+
+#RegisterDialog #sure_btn:hover,
+#RegisterDialog #return_btn:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
+                                stop: 0 #9bd0ac,
+                                stop: 1 #79ba8e);
+}
+
+#RegisterDialog #sure_btn:pressed,
+#RegisterDialog #return_btn:pressed {
+    background: #63a379;
+}
+
+#RegisterDialog #sure_btn:disabled,
+#RegisterDialog #return_btn:disabled {
+    background: #c7e1cf;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+#RegisterDialog #cancel_btn {
+    background: #ffffff;
+    color: #4f7c60;
+    border: 1px solid #cfe3d4;
+}
+
+#RegisterDialog #cancel_btn:hover {
+    background: #f4fbf6;
+    border: 1px solid #b6d7c0;
+}
+
+#RegisterDialog #cancel_btn:pressed {
+    background: #edf6ef;
+}
+
+#RegisterDialog #tip_lb {
+    color: #2d5a3d;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Microsoft YaHei';
+}
+
+#RegisterDialog #tip2_lb {
+    color: #7b9a87;
+    font-size: 12px;
+    font-family: 'Microsoft YaHei';
+}
+
+#ResetDialog #reset_title {
+    color: #b76d45;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Microsoft YaHei';
+    margin-top: 2px;
+}
+
+#ResetDialog #reset_subtitle {
+    color: #c19375;
+    font-size: 12px;
+    font-family: 'Microsoft YaHei';
+    margin-bottom: 2px;
+}
+
+#ResetDialog #user_label,
+#ResetDialog #email_label,
+#ResetDialog #varify_label,
+#ResetDialog #pwd_label {
+    color: #bf7449;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Microsoft YaHei';
+    padding-left: 2px;
+}
+
+#ResetDialog #user_edit,
+#ResetDialog #email_edit,
+#ResetDialog #varify_edit,
+#ResetDialog #pwd_edit {
+    color: #7f5c46;
+    selection-background-color: #ffd8be;
+    font-size: 13px;
+    font-family: 'Microsoft YaHei';
+}
+
+#ResetDialog #user_edit::placeholder,
+#ResetDialog #email_edit::placeholder,
+#ResetDialog #varify_edit::placeholder,
+#ResetDialog #pwd_edit::placeholder {
+    color: #c3a390;
+}
+
+#ResetDialog #verify_row {
+    background: transparent;
+}
+
+#ResetDialog #err_tip {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 12px;
+    font-family: 'Microsoft YaHei';
+    min-height: 28px;
+    max-height: 28px;
+    padding: 0 8px;
+    margin: 0 0 2px 0;
+}
+
+#ResetDialog #err_tip:empty,
+#ResetDialog #err_tip[state='empty'] {
+    border: none;
+    background: transparent;
+    color: transparent;
+}
+
+#ResetDialog #err_tip[state='normal'] {
+    color: #b16f4c;
+    border: 1px solid rgba(177, 111, 76, 0.16);
+    background: rgba(255, 245, 238, 0.96);
+}
+
+#ResetDialog #err_tip[state='err'] {
+    color: #cb5a4d;
+    border: 1px solid rgba(203, 90, 77, 0.18);
+    background: rgba(255, 241, 239, 0.92);
+}
+
+#ResetDialog #varify_btn {
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei';
+}
+
+#ResetDialog #sure_btn,
+#ResetDialog #return_btn {
+    font-size: 14px;
+    font-family: 'Microsoft YaHei';
+    border-radius: 14px;
+}
+
+#ResetDialog #sure_btn {
+    background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
+                                stop: 0 #efb28d,
+                                stop: 1 #de996d);
+    color: #ffffff;
+    border: none;
+}
+
+#ResetDialog #sure_btn:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
+                                stop: 0 #f4bd9c,
+                                stop: 1 #e7a57c);
+}
+
+#ResetDialog #sure_btn:pressed {
+    background: #d68d61;
+}
+
+#ResetDialog #sure_btn:disabled {
+    background: #f4ddcf;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+#ResetDialog #return_btn {
+    background: #ffffff;
+    color: #b1714f;
+    border: 1px solid #f0d3c1;
+}
+
+#ResetDialog #return_btn:hover {
+    background: #fffbf7;
+    border: 1px solid #e7c0a8;
+}
+
+#ResetDialog #return_btn:pressed {
+    background: #fff3eb;
+}
+
+#LoginDialog #login_btn {
+    background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
+                                stop: 0 #8ec8a0,
+                                stop: 1 #6faf84);
+    color: #ffffff;
+    border: none;
+}
+
+#LoginDialog #login_btn:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
+                                stop: 0 #9bd0ac,
+                                stop: 1 #79ba8e);
+}
+
+#LoginDialog #login_btn:pressed {
+    background: #63a379;
+}
+
+#LoginDialog #login_btn:disabled {
+    background: #c7e1cf;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+#LoginDialog #reg_btn {
+    background: #ffffff;
+    color: #4f7c60;
+    border: 1px solid #cfe3d4;
+}
+
+#LoginDialog #reg_btn:hover {
+    background: #f4fbf6;
+    border: 1px solid #b6d7c0;
+}
+
+#LoginDialog #reg_btn:pressed {
+    background: #edf6ef;
+}
+
+#side_bar{
+  background-color:rgb(46,46,46);
+}
+
+#add_btn[state='normal']{
+    border-image: url(:/res/add_friend_normal.png);
+}
+
+#add_btn[state='hover']{
+    border-image: url(:/res/add_friend_hover.png);
+
+}
+
+#add_btn[state='press']{
+    border-image: url(:/res/add_friend_hover.png);
+}
+
+#search_wid{
+     background-color:rgb(247,247,247);
+}
+
+#chat_user_list {
+    background-color: rgb(247,247,248);
+    border: none;
+}
+
+#chat_user_list::item:selected {
+    background-color: #d3d7d4;
+    border: none;
+    outline: none;
+}
+
+#chat_user_list::item:hover {
+    background-color: rgb(206,207,208);
+    border: none;
+    outline: none;
+}
+
+#chat_user_list::focus {
+    border: none;
+    outline: none;
+}
+
+#user_chat_lb{
+    color:rgb(153,153,153);
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+}
+
+#already_add_lb{
+    color:rgb(153,153,153);
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+}
+
+#user_name_lb{
+    color:rgb(0,0,0);
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "Microsoft YaHei";
+}
+
+#time_wid #time_lb{
+   color:rgb(140,140,140);
+   font-size: 12px;
+   font-family: "Microsoft YaHei";
+}
+
+QScrollBar:vertical {
+    background: transparent; /* 灏嗚建閬撹儗鏅缃负閫忔槑 */
+    width: 8px; /* 婊氬姩鏉″搴︼紝鏍规嵁闇€瑕佽皟鏁?*/
+    margin: 0px; /* 绉婚櫎婊氬姩鏉′笌婊戝潡涔嬮棿鐨勯棿璺?*/
+}
+
+QScrollBar::handle:vertical {
+    background: rgb(173,170,169); /* 婊戝潡棰滆壊 */
+    min-height: 10px; /* 婊戝潡鏈€灏忛珮搴︼紝鏍规嵁闇€瑕佽皟鏁?*/
+    border-radius: 4px; /* 婊戝潡杈圭紭鍦嗚锛岃皟鏁翠互褰㈡垚妞渾褰㈢姸 */
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px; /* 绉婚櫎涓婁笅鎸夐挳 */
+    border: none; /* 绉婚櫎杈规 */
+    background: transparent; /* 鑳屾櫙閫忔槑 */
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none; /* 椤甸潰婊氬姩閮ㄥ垎鑳屾櫙閫忔槑 */
+}
+
+LoadingDlg{
+    background: #f2eada;
+}
+
+#title_lb{
+    font-family: "Microsoft YaHei";
+    font-size: 18px;
+    font-weight: normal;
+}
+
+#chatEdit{
+    background: #ffffff;
+    border: none; /* 闅愯棌杈规 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+    font-size: 18px; /* 璁剧疆瀛椾綋澶у皬 */
+    padding: 5px; /* 璁剧疆鍐呰竟璺?*/
+}
+
+#send_wid{
+    background: #ffffff;
+    border: none; /* 闅愯棌杈规 */
+}
+
+#add_btn[state='normal']{
+    border-image: url(:/res/add_friend_normal.png);
+}
+
+#add_btn[state='hover']{
+    border-image: url(:/res/add_friend_hover.png);
+
+}
+
+#add_btn[state='press']{
+    border-image: url(:/res/add_friend_hover.png);
+}
+
+#receive_btn[state='normal']{
+   background: #f0f0f0;
+   color: #2cb46e;
+   font-size: 16px; /* 璁剧疆瀛椾綋澶у皬 */
+   font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+   border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#receive_btn[state='hover']{
+   background: #d2d2d2;
+   color: #2cb46e;
+   font-size: 16px; /* 璁剧疆瀛椾綋澶у皬 */
+   font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+   border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#receive_btn[state='press']{
+   background: #c6c6c6;
+   color: #2cb46e;
+   font-size: 16px; /* 璁剧疆瀛椾綋澶у皬 */
+   font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+   border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#send_btn[state='normal']{
+    background: #f0f0f0;
+    color: #2cb46e;
+    font-size: 16px; /* 璁剧疆瀛椾綋澶у皬 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+    border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#send_btn[state='hover']{
+   background: #d2d2d2;
+   color: #2cb46e;
+   font-size: 16px; /* 璁剧疆瀛椾綋澶у皬 */
+   font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+   border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#send_btn[state='press']{
+   background: #c6c6c6;
+   color: #2cb46e;
+   font-size: 16px; /* 璁剧疆瀛椾綋澶у皬 */
+   font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+   border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#tool_wid{
+    background: #ffffff;
+    border-bottom: 0.5px solid #ececec; /* 璁剧疆涓嬭竟妗嗛鑹插拰瀹藉害 */
+}
+
+#emo_lb[state='normal']{
+    border-image: url(:/res/smile.png);
+}
+
+#emo_lb[state='hover']{
+    border-image: url(:/res/smile_hover.png);
+}
+
+#emo_lb[state='press']{
+    border-image: url(:/res/smile_press.png);
+}
+
+#file_lb[state='normal']{
+    border-image: url(:/res/filedir.png);
+}
+
+#file_lb[state='hover']{
+    border-image: url(:/res/filedir_hover.png);
+}
+
+#file_lb[state='press']{
+    border-image: url(:/res/filedir_press.png);
+}
+
+#chat_data_list{
+     background: transparent;
+}
+
+#chat_bg{
+    background: #f0f0f0;
+}
+
+#chat_area{
+    border: none;
+}
+
+#chat_user_name{
+    color:rgb(153,153,153);
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+}
+
+#side_chat_lb[state='normal']{
+    border-image: url(:/res/chat_icon.png);
+}
+
+#side_chat_lb[state='hover']{
+    border-image: url(:/res/chat_icon_hover.png);
+}
+
+#side_chat_lb[state='pressed']{
+    border-image: url(:/res/chat_icon_press.png);
+}
+
+#side_chat_lb[state='selected_normal']{
+    border-image: url(:/res/chat_icon_press.png);
+}
+
+#side_chat_lb[state='selected_hover']{
+    border-image: url(:/res/chat_icon_press.png);
+}
+
+#side_chat_lb[state='selected_pressed']{
+    border-image: url(:/res/chat_icon_press.png);
+}
+
+#side_contact_lb[state='normal']{
+    border-image: url(:/res/contact_list.png);
+}
+
+#side_contact_lb[state='hover']{
+    border-image: url(:/res/contact_list_hover.png);
+}
+
+#side_contact_lb[state='pressed']{
+    border-image: url(:/res/contact_list_press.png);
+}
+
+#side_contact_lb[state='selected_normal']{
+    border-image: url(:/res/contact_list_press.png);
+}
+
+#side_contact_lb[state='selected_hover']{
+    border-image: url(:/res/contact_list_press.png);
+}
+
+#side_contact_lb[state='selected_pressed']{
+    border-image: url(:/res/contact_list_press.png);
+}
+
+#side_settings_lb[state='normal']{
+    border-image: url(:/res/settings.png);
+}
+
+#side_settings_lb[state='hover']{
+    border-image: url(:/res/settings_hover.png);
+}
+
+
+#side_settings_lb[state='pressed']{
+    border-image: url(:/res/settings_press.png);
+}
+
+#side_settings_lb[state='selected_normal']{
+    border-image: url(:/res/settings_press.png);
+}
+
+#side_settings_lb[state='selected_hover']{
+    border-image: url(:/res/settings_press.png);
+}
+
+#side_settings_lb[state='selected_pressed']{
+    border-image: url(:/res/settings_press.png);
+}
+
+
+/* 鎼滅储妗嗗垪琛?/
+#search_list {
+    background-color: rgb(247,247,248);
+    border: none;
+}
+
+#search_list::item:selected {
+    background-color: #d3d7d4;
+    border: none;
+    outline: none;
+}
+
+#search_list::item:hover {
+    background-color: rgb(206,207,208);
+    border: none;
+    outline: none;
+}
+
+#search_list::focus {
+    border: none;
+    outline: none;
+}
+
+#invalid_item {
+    background-color: #eaeaea;
+    border: none;
+}
+
+#add_tip {
+    border-image: url(:/res/addtip.png);
+}
+
+#right_tip{
+ border-image: url(:/res/right_tip.png);
+}
+
+#message_tip{
+  text-align: center;
+  font-family: "Microsoft YaHei";
+  font-size: 12pt;
+}
+
+#FindSuccessDlg{
+   background-color: #ffffff;
+}
+
+#name_lb{
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+}
+
+#add_friend_btn[state='normal']{
+    background: #07c160;
+    color: #ffffff;
+    font-size: 14px; /* 璁剧疆瀛椾綋澶у皬 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+    border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#add_friend_btn[state='hover']{
+    background: #3bbb4b;
+    color: #ffffff;
+    font-size: 14px; /* 璁剧疆瀛椾綋澶у皬 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+    border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#add_friend_btn[state='press']{
+   background: #07c160;
+   color: #ffffff;
+   font-size: 14px; /* 璁剧疆瀛椾綋澶у皬 */
+   font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+   border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#ApplyFriend{
+    border: 2px solid #f1f1f1;
+    font-size: 14px;
+    background: #f7f7f8;
+}
+
+#scrollArea{
+    background: #f7f7f8;
+    border: none;
+}
+
+#scrollcontent{
+     background: #f7f7f8;
+}
+
+#scrollcontent #apply_lb{
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    font-weight: normal;
+}
+
+#apply_wid QLabel{
+    color:rgb(140,140,140);
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    height: 25px;
+}
+
+#apply_wid #name_ed, #apply_wid #back_ed{
+    border: 1px solid #f7f7f8;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+}
+
+#apply_wid #lb_ed {
+       border: none;
+       font-size: 14px;
+       font-family: "Microsoft YaHei";
+}
+
+#apply_wid #more_lb{
+    border-image: url(:/res/arowdown.png);
+}
+
+#apply_wid #tipslb[state='normal'] {
+    padding: 2px;
+    background: #e1e1e1;
+    color: #1e1e1e;
+    border-radius: 10px;
+}
+
+#apply_wid #tipslb[state='hover'] {
+    padding: 2px;
+    background: #e1e1e1;
+    color: #1e1e1e;
+    border-radius: 10px;
+}
+
+#apply_wid #tipslb[state='pressed'] {
+    padding: 2px;
+    background: #e1e1e1;
+    color: #48bf56;
+    border-radius: 10px;
+}
+
+#apply_wid #tipslb[state='selected_normal'] {
+    padding: 2px;
+    background: #e1e1e1;
+    color: #48bf56;
+    border-radius: 10px;
+}
+
+#apply_wid #tipslb[state='selected_hover'] {
+    padding: 2px;
+    background: #e1e1e1;
+    color: #48bf56;
+    border-radius: 10px;
+}
+
+#apply_wid #tipslb[state='selected_pressed'] {
+    padding: 2px;
+    background: #e1e1e1;
+    color: #1e1e1e;
+    border-radius: 10px;
+}
+
+#input_tip_wid {
+    background: #d3eaf8;
+}
+
+#apply_wid #FriendLabel {
+    background: #daf6e7;
+    color: #48bf56;
+    border-radius: 10px;
+}
+
+#apply_wid #tip_lb {
+    padding-left: 2px;
+    color:rgb(153,153,153);
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+}
+
+#gridWidget {
+   background: #fdfdfd;
+}
+
+#close_lb[state='normal'] {
+    border-image: url(:/res/tipclose.png);
+}
+
+#close_lb[state='hover'] {
+    border-image: url(:/res/tipclose.png);
+}
+
+#close_lb[state='pressed'] {
+    border-image: url(:/res/tipclose.png);
+}
+
+#close_lb[state='select_normal'] {
+    border-image: url(:/res/tipclose.png);
+}
+
+#close_lb[state='select_hover'] {
+    border-image: url(:/res/tipclose.png);
+}
+
+#close_lb[state='select_pressed'] {
+    border-image: url(:/res/tipclose.png);
+}
+
+#apply_sure_wid #sure_btn[state='normal']  {
+    background: #f0f0f0;
+    color: #2cb46e;
+    font-size: 16px; /* 璁剧疆瀛椾綋澶у皬 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+    border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#apply_sure_wid #sure_btn[state='hover'] {
+    background: #d2d2d2;
+    color: #2cb46e;
+    font-size: 16px; /* 璁剧疆瀛椾綋澶у皬 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+    border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#apply_sure_wid #sure_btn[state='press'] {
+    background: #c6c6c6;
+    color: #2cb46e;
+    font-size: 16px; /* 璁剧疆瀛椾綋澶у皬 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+    border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#apply_sure_wid #cancel_btn[state='normal']  {
+    background: #f0f0f0;
+    color: #2e2f30;
+    font-size: 16px; /* 璁剧疆瀛椾綋澶у皬 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+    border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#apply_sure_wid #cancel_btn[state='hover'] {
+    background: #d2d2d2;
+    color: #2e2f30;
+    font-size: 16px; /* 璁剧疆瀛椾綋澶у皬 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+    border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#apply_sure_wid #cancel_btn[state='press'] {
+    background: #c6c6c6;
+    color: #2e2f30;
+    font-size: 16px; /* 璁剧疆瀛椾綋澶у皬 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+    border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#con_user_list {
+    background-color: rgb(247,247,248);
+    border: none;
+}
+
+#con_user_list::item:selected {
+    background-color: #d3d7d4;
+    border: none;
+    outline: none;
+}
+
+#con_user_list::item:hover {
+    background-color: rgb(206,207,208);
+    border: none;
+    outline: none;
+}
+
+#con_user_list::focus {
+    border: none;
+    outline: none;
+}
+
+
+#GroupTipItem {
+    background-color: #eaeaea;
+    border: none;
+}
+
+#GroupTipItem QLabel{
+    color: #2e2f30;
+    font-size: 12px; /* 璁剧疆瀛椾綋澶у皬 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+    border: none;
+}
+
+#new_friend_item {
+     border-bottom: 1px solid #eaeaea;
+}
+
+#LineItem {
+    background-color:rgb(247,247,247);
+    border: none;
+}
+
+#friend_apply_lb {
+    font-family: "Microsoft YaHei";
+    font-size: 18px;
+    font-weight: normal;
+}
+
+#friend_apply_wid {
+    background-color: #f1f2f3;
+    border-bottom: 1px solid #ede9e7;
+}
+
+#apply_friend_list {
+    background-color: #f1f2f3;
+    border-left: 1px solid #ede9e7;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+ApplyFriendItem {
+    background-color: #f1f2f3;
+    border-bottom: 2px solid #dbd9d9;
+}
+
+ApplyFriendItem #user_chat_lb{
+    color: #a2a2a2;
+    font-size: 14px; /* 璁剧疆瀛椾綋澶у皬 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+}
+
+ApplyFriendItem #addBtn[state='normal'] {
+    background-color: #d3d7d4;
+    color: #2cb46e;
+    font-size: 16px; /* 璁剧疆瀛椾綋澶у皬 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+    border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+ApplyFriendItem #addBtn[state='hover'] {
+    background-color: #D3D3D3;
+    color: #2cb46e;
+    font-size: 16px; /* 璁剧疆瀛椾綋澶у皬 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+    border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+ApplyFriendItem #addBtn[state='press'] {
+    background-color: #BEBEBE;
+    color: #2cb46e;
+    font-size: 16px; /* 璁剧疆瀛椾綋澶у皬 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+    border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#AuthenFriend {
+    border: 2px solid #f1f1f1;
+    font-size: 14px;
+    background: #f7f7f8;
+}
+
+#red_point {
+    border-image: url(:/res/red_point.png);
+}
+
+#FindFailDlg{
+   background-color: #ffffff;
+}
+
+#fail_tip, #fail_tip2 {
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+}
+
+#fail_sure_btn[state='normal']{
+    background: #07c160;
+    color: #ffffff;
+    font-size: 14px; /* 璁剧疆瀛椾綋澶у皬 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+    border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#fail_sure_btn[state='hover']{
+    background: #3bbb4b;
+    color: #ffffff;
+    font-size: 14px; /* 璁剧疆瀛椾綋澶у皬 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+    border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#fail_sure_btn[state='press']{
+   background: #07c160;
+   color: #ffffff;
+   font-size: 14px; /* 璁剧疆瀛椾綋澶у皬 */
+   font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+   border-radius: 20px; /* 璁剧疆鍦嗚 */
+}
+
+#friend_info_page #name_lb {
+    color: #161616;
+    font-size: 18px; /* 璁剧疆瀛椾綋澶у皬 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+}
+
+#friend_info_page #nick_tip,
+#friend_info_page #nick_lb,
+#friend_info_page #bak_lb,
+#friend_info_page #bak_tip
+{
+    color: #161616;
+    font-size: 14px; /* 璁剧疆瀛椾綋澶у皬 */
+    font-family: "Microsoft YaHei"; /* 璁剧疆瀛椾綋 */
+}
+
+#msg_chat[state='normal'] {
+ border-image: url(:/res/msg_chat_normal.png);
+}
+
+#msg_chat[state='hover'] {
+ border-image: url(:/res/msg_chat_hover.png);
+}
+
+#msg_chat[state='press'] {
+ border-image: url(:/res/msg_chat_press.png);
+}
+
+#video_chat[state='normal'] {
+ border-image: url(:/res/video_chat_normal.png);
+}
+
+#video_chat[state='hover'] {
+ border-image: url(:/res/video_chat_hover.png);
+}
+
+#video_chat[state='press'] {
+ border-image: url(:/res/video_chat_press.png);
+}
+
+#voice_chat[state='normal'] {
+ border-image: url(:/res/voice_chat_normal.png);
+}
+
+#voice_chat[state='hover'] {
+ border-image: url(:/res/voice_chat_hover.png);
+}
+
+#voice_chat[state='press'] {
+ border-image: url(:/res/voice_chat_press.png);
+}
+
+LoadingDlg #status_lb {
+    color:rgb(153,153,153);
+    font-size: 18px;
+    font-family: "Microsoft YaHei";
+}
+
+/* === panel unify start === */
+#ApplyFriendPage,
+#FriendInfoPage,
+#UserInfoPage {
+    background: #f6f8fb;
+}
+
+#friend_apply_wid {
+    background: #ffffff;
+    border-bottom: 1px solid #e4e9ee;
+}
+
+#friend_apply_lb,
+#label_4 {
+    color: #17212b;
+    font-family: "Microsoft YaHei";
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#apply_friend_list {
+    background: #f8fafc;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+}
+
+ApplyFriendItem {
+    background: #ffffff;
+    border: 1px solid #ebf0f4;
+    border-radius: 12px;
+}
+
+ApplyFriendItem #user_name_lb,
+#ConUserItem #user_name_lb,
+#friend_info_page #name_lb {
+    color: #17212b;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Microsoft YaHei";
+}
+
+ApplyFriendItem #user_chat_lb {
+    color: #8a97a6;
+    font-size: 13px;
+    font-family: "Microsoft YaHei";
+}
+
+ApplyFriendItem #addBtn,
+ApplyFriendItem #addBtn[state='normal'] {
+    background: #07c160;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Microsoft YaHei";
+    padding: 0 14px;
+}
+
+ApplyFriendItem #addBtn[state='hover'] {
+    background: #06d06a;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Microsoft YaHei";
+}
+
+ApplyFriendItem #addBtn[state='press'] {
+    background: #05a955;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Microsoft YaHei";
+}
+
+ApplyFriendItem #already_add_lb {
+    color: #8fa0ad;
+    font-size: 13px;
+    font-family: "Microsoft YaHei";
+}
+
+#FriendInfoPage QWidget#widget,
+#UserInfoPage QLineEdit,
+#UserInfoPage QPushButton,
+#friend_info_page {
+    font-family: "Microsoft YaHei";
+}
+
+#friend_info_page {
+    background: #ffffff;
+    border: 1px solid #e8edf2;
+    border-radius: 20px;
+}
+
+#friend_info_page #name_lb {
+    color: #17212b;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#friend_info_page #nick_tip,
+#friend_info_page #bak_tip {
+    color: #8a97a6;
+    font-size: 13px;
+    font-family: "Microsoft YaHei";
+}
+
+#friend_info_page #nick_lb,
+#friend_info_page #bak_lb {
+    color: #2a3340;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+}
+
+#UserInfoPage QLabel {
+    color: #2a3340;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+}
+
+#UserInfoPage #label,
+#UserInfoPage #label_2,
+#UserInfoPage #label_3 {
+    color: #7f8c98;
+    font-size: 13px;
+    font-family: "Microsoft YaHei";
+}
+
+#UserInfoPage #nick_ed,
+#UserInfoPage #name_ed,
+#UserInfoPage #desc_ed {
+    background: #ffffff;
+    border: 1px solid #dfe5eb;
+    border-radius: 10px;
+    color: #1b2430;
+    padding: 0 12px;
+    min-height: 36px;
+}
+
+#UserInfoPage #nick_ed:focus,
+#UserInfoPage #name_ed:focus,
+#UserInfoPage #desc_ed:focus {
+    border: 1px solid #9fd9b6;
+}
+
+#UserInfoPage #up_btn,
+#UserInfoPage #submit_btn {
+    background: #ffffff;
+    color: #1b2430;
+    border: 1px solid #dfe5eb;
+    border-radius: 10px;
+    min-height: 36px;
+    padding: 0 18px;
+}
+
+#UserInfoPage #up_btn:hover,
+#UserInfoPage #submit_btn:hover {
+    background: #f8fbfd;
+    border: 1px solid #cfd9e2;
+}
+
+#UserInfoPage #submit_btn {
+    background: #07c160;
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+}
+
+#UserInfoPage #submit_btn:hover {
+    background: #06d06a;
+}
+
+#ConUserItem {
+    background: transparent;
+}
+
+#ConUserItem #user_name_lb {
+    color: #17212b;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Microsoft YaHei";
+}
+/* === panel unify end === */
+
+/* === chat polish start === */
+QDialog#ChatDialog {
+    background: #edf1f4;
+}
+
+QWidget#side_bar {
+    background-color: #2c3138;
+    border-right: 1px solid #252a30;
+}
+
+#side_head_lb {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+}
+
+QWidget#chat_user_wid,
+QWidget#search_wid {
+    background: #f3f5f7;
+}
+
+QWidget#chat_user_wid {
+    border: none;
+}
+
+QWidget#search_wid {
+    border-bottom: 1px solid #e3e8ed;
+}
+
+#search_edit {
+    background: transparent;
+    border: none;
+    color: #333333;
+    font-size: 13px;
+    font-family: "Microsoft YaHei";
+    padding: 0 12px;
+    selection-background-color: #d6f0df;
+}
+
+#search_edit:focus {
+    border: none;
+    background: transparent;
+}
+
+QWidget#search_wid #add_btn[state='normal'] {
+    background: #f7f8fa;
+    border: 1px solid #e4e7eb;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+QWidget#search_wid #add_btn[state='hover'] {
+    background: #ffffff;
+    border: 1px solid #d9dde2;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+QWidget#search_wid #add_btn[state='press'] {
+    background: #eef2f5;
+    border: 1px solid #d8dde3;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+#chat_user_list,
+#con_user_list,
+#search_list {
+    background-color: #f3f5f7;
+    border: none;
+    outline: none;
+    padding: 8px 4px;
+}
+
+#chat_user_list::item,
+#con_user_list::item,
+#search_list::item {
+    margin: 4px 8px;
+    border-radius: 8px;
+}
+
+#chat_user_list::item:selected,
+#con_user_list::item:selected,
+#search_list::item:selected {
+    background-color: #dde5e8;
+    border: none;
+    outline: none;
+}
+
+#chat_user_list::item:hover,
+#con_user_list::item:hover,
+#search_list::item:hover {
+    background-color: #e8edf1;
+    border: none;
+    outline: none;
+}
+
+QWidget#ChatUserWid,
+QWidget#ConUserItem {
+    background: transparent;
+}
+
+#user_name_lb {
+    color: #111111;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Microsoft YaHei";
+}
+
+#user_chat_lb {
+    color: #8c8c8c;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+}
+
+#time_wid #time_lb {
+    color: #b0b0b0;
+    font-size: 11px;
+    font-family: "Microsoft YaHei";
+}
+
+#chat_data_list {
+    background: transparent;
+    border: none;
+}
+
+#chat_bg,
+#ChatPage,
+#chat_data_wid {
+    background: #f7f7f7;
+}
+
+#chat_area {
+    border: none;
+    background: transparent;
+}
+
+#title_wid {
+    background: #f4f6f8;
+    border-bottom: 1px solid #dde4ea;
+}
+
+#title_lb {
+    color: #111111;
+    font-family: "Microsoft YaHei";
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 4px;
+}
+
+#tool_wid,
+#send_wid,
+#chatEdit {
+    background: #ffffff;
+}
+
+#chatEdit {
+    border-top: 1px solid #f1f4f7;
+}
+
+#tool_wid {
+    border-top: 1px solid #e9edf1;
+    border-bottom: none;
+}
+
+#send_wid {
+    border-top: none;
+    border-bottom: 1px solid transparent;
+}
+
+#chatEdit {
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: 1px solid #f1f4f7;
+    color: #111111;
+    font-family: "Microsoft YaHei";
+    font-size: 15px;
+    padding: 8px 20px 8px 20px;
+    selection-background-color: #d6f0df;
+}
+
+#chatEdit:focus {
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: 1px solid #f1f4f7;
+}
+
+#chat_user_name {
+    color: #9b9b9b;
+    font-size: 13px;
+    font-family: "Microsoft YaHei";
+}
+
+#emo_lb[state='normal'],
+#file_lb[state='normal'] {
+    background: transparent;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+#emo_lb[state='hover'],
+#file_lb[state='hover'] {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+#emo_lb[state='press'],
+#file_lb[state='press'] {
+    background: #ebebeb;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+#receive_btn,
+#receive_btn[state='normal'] {
+    background: #f5f5f5;
+    color: #666666;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+}
+
+#receive_btn[state='hover'] {
+    background: #ffffff;
+    color: #555555;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+}
+
+#receive_btn[state='press'] {
+    background: #e9e9e9;
+    color: #555555;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+}
+
+#send_btn,
+#send_btn[state='normal'] {
+    background: #07c160;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Microsoft YaHei";
+}
+
+#send_btn[state='hover'] {
+    background: #06d06a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Microsoft YaHei";
+}
+
+#send_btn[state='press'] {
+    background: #05a955;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Microsoft YaHei";
+}
+
+#side_chat_lb[state='normal'],
+#side_contact_lb[state='normal'],
+#side_settings_lb[state='normal'] {
+    background: transparent;
+    border-image: none;
+    border-radius: 10px;
+}
+
+#side_chat_lb[state='hover'],
+#side_contact_lb[state='hover'],
+#side_settings_lb[state='hover'],
+#side_chat_lb[state='pressed'],
+#side_contact_lb[state='pressed'],
+#side_settings_lb[state='pressed'] {
+    background: rgba(255, 255, 255, 0.12);
+    border-image: none;
+    border-radius: 10px;
+}
+
+#side_chat_lb[state='selected_normal'],
+#side_chat_lb[state='selected_hover'],
+#side_chat_lb[state='selected_pressed'],
+#side_contact_lb[state='selected_normal'],
+#side_contact_lb[state='selected_hover'],
+#side_contact_lb[state='selected_pressed'],
+#side_settings_lb[state='selected_normal'],
+#side_settings_lb[state='selected_hover'],
+#side_settings_lb[state='selected_pressed'] {
+    background: #214135;
+    border: 1px solid rgba(63, 107, 89, 0.85);
+    border-image: none;
+    border-radius: 10px;
+    padding: 0px;
+}
+
+QScrollBar:vertical {
+    background: transparent;
+    width: 6px;
+    margin: 10px 2px 10px 0;
+}
+
+QScrollBar::handle:vertical {
+    background: rgba(0, 0, 0, 0.18);
+    min-height: 30px;
+    border-radius: 3px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: rgba(0, 0, 0, 0.26);
+}
+/* === chat polish end === */
+
+

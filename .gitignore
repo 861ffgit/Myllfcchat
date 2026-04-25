@@ -1,0 +1,98 @@
+# ==============================================
+# Qt 项目相关忽略
+# ==============================================
+# 编译构建目录
+build/
+# Qt 项目用户配置文件
+*.pro.user
+*.pro.user.*
+# qmake 生成的临时文件
+qmake.stash
+Makefile*
+*.moc
+*.obj
+*.o
+# 编译生成的库和可执行文件
+*.a
+*.lib
+*.dll
+*.exe
+*.out
+*.app
+# 编译日志
+*.log
+
+# ==============================================
+# Visual Studio 项目相关忽略
+# ==============================================
+# VS 配置缓存目录
+.vs/
+# 编译输出目录
+x64/
+Debug/
+Release/
+# VS 用户配置文件
+*.vcxproj.user
+# VS 解决方案和项目相关临时文件
+*.suo
+*.sdf
+*.opensdf
+*.tlog
+*.lastbuildstate
+# 编译中间文件和输出文件
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.exe
+*.dll
+
+# ==============================================
+# Node.js 项目相关忽略（新增模块）
+# ==============================================
+# 核心：屏蔽所有子目录下的 node_modules（包括 workspace/VarifyServer/ 里的）
+node_modules/
+# npm/yarn/pnpm 日志文件
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+# 环境变量配置文件（避免泄露敏感信息）
+.env
+.env.local
+.env.*.local
+# Node.js 运行时临时文件
+*.pid
+*.seed
+*.pid.lock
+# 测试覆盖率文件
+coverage/
+*.lcov
+# 构建输出目录（如 dist/ build/）
+dist/
+# node-gyp 构建临时文件
+.node-gyp/
+
+# ==============================================
+# 临时文件、日志与无关文件
+# ==============================================
+# 临时日志/文本文件
+err.txt
+out.txt
+tmp_*.txt
+*.log
+*.tmp
+*.bak
+# 系统无关文件
+.DS_Store
+Thumbs.db
+
+# ==============================================
+# 忽略所有 Patch 文件及相关配置
+# ==============================================
+# 所有 .patch 补丁文件（递归匹配所有目录）
+*.patch
+# 补丁相关日志/配置文件
+_patch.txt
+_patch_debug.txt

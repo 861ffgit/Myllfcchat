@@ -1,0 +1,69 @@
+#ifndef STATEWIDGET_H
+#define STATEWIDGET_H
+#include <QWidget>
+#include "global.h"
+#include <QLabel>
+#include <QSize>
+
+class StateWidget : public QWidget
+{
+    Q_OBJECT
+public:
+    explicit StateWidget(QWidget *parent = nullptr);
+
+    void SetState(QString normal="", QString hover="", QString press="",
+                  QString select="", QString select_hover="", QString select_press="");
+    void SetIconSet(QString normal="", QString hover="", QString press="",
+                    QString select="", QString select_hover="", QString select_press="");
+    void SetIconSize(const QSize &size);
+
+    ClickLbState GetCurState();
+    void ClearState();
+
+    void SetSelected(bool bselected);
+    void AddRedPoint();
+    void ShowRedPoint(bool show=true);
+
+protected:
+    void paintEvent(QPaintEvent* event);
+    void resizeEvent(QResizeEvent *event) override;
+
+    virtual void mousePressEvent(QMouseEvent *ev) override;
+    virtual void mouseReleaseEvent(QMouseEvent *ev) override;
+    virtual void enterEvent(QEnterEvent* event) override;
+    virtual void leaveEvent(QEvent* event) override;
+
+private:
+
+    QString _normal;
+    QString _normal_hover;
+    QString _normal_press;
+
+    QString _selected;
+    QString _selected_hover;
+    QString _selected_press;
+
+    QString _normal_icon;
+    QString _normal_hover_icon;
+    QString _normal_press_icon;
+
+    QString _selected_icon;
+    QString _selected_hover_icon;
+    QString _selected_press_icon;
+
+    ClickLbState _curstate;
+    QLabel * _red_point;
+    QSize _icon_size;
+
+    QString CurrentIconPath() const;
+    void UpdateRedPointPosition();
+
+signals:
+    void clicked(void);
+
+signals:
+
+public slots:
+};
+
+#endif // STATEWIDGET_H
