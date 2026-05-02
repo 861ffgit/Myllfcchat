@@ -636,12 +636,14 @@ QScrollBar:vertical {
     background: transparent; /* 灏嗚建閬撹儗鏅缃负閫忔槑 */
     width: 8px; /* 婊氬姩鏉″搴︼紝鏍规嵁闇€瑕佽皟鏁?*/
     margin: 0px; /* 绉婚櫎婊氬姩鏉′笌婊戝潡涔嬮棿鐨勯棿璺?*/
+    border: none;
 }
 
 QScrollBar::handle:vertical {
     background: rgb(173,170,169); /* 婊戝潡棰滆壊 */
     min-height: 10px; /* 婊戝潡鏈€灏忛珮搴︼紝鏍规嵁闇€瑕佽皟鏁?*/
     border-radius: 4px; /* 婊戝潡杈圭紭鍦嗚锛岃皟鏁翠互褰㈡垚妞渾褰㈢姸 */
+    border: none;
 }
 
 QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {

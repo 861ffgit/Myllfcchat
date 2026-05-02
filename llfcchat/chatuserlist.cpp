@@ -7,6 +7,12 @@
 ChatUserList::ChatUserList(QWidget *parent):QListWidget(parent), _load_pending(false)
 {
     Q_UNUSED(parent);
+    this->setFrameShape(QFrame::NoFrame);
+    this->setFrameShadow(QFrame::Plain);
+    this->setLineWidth(0);
+    this->setMidLineWidth(0);
+    this->setViewportMargins(0, 0, 0, 0);
+    this->viewport()->setAutoFillBackground(false);
     this->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     this->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     // 安装事件过滤器
