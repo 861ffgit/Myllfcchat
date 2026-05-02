@@ -1,12 +1,39 @@
 #include "mainwindow.h"
 #include <QApplication>
 #include <QFile>
+#include <QFileInfo>
 #include <QCoreApplication>
 #include <QDir>
 #include <QStringList>
 #include "global.h"
 #include "tcpmgr.h"
 #include "filetcpmgr.h"
+
+namespace {
+QString FindConfigPath(const QString &fileName)
+{
+    QStringList configPaths;
+    const QString appDir = QCoreApplication::applicationDirPath();
+    const QChar sep = QLatin1Char('/');
+    const QString dotDot(2, QLatin1Char('.'));
+
+    configPaths << QDir::currentPath() + sep + fileName
+                << appDir + sep + fileName
+                << appDir + sep + dotDot + sep + fileName
+                << appDir + sep + dotDot + sep + dotDot + sep + fileName
+                << appDir + sep + dotDot + sep + dotDot + sep + dotDot + sep + fileName
+                << appDir + sep + dotDot + sep + dotDot + sep + dotDot + sep + dotDot + sep + fileName;
+
+    for (const auto &configPath : configPaths) {
+        const QString cleanPath = QDir::cleanPath(configPath);
+        if (QFileInfo::exists(cleanPath)) {
+            return cleanPath;
+        }
+    }
+
+    return QString();
+}
+}
 
 int main(int argc, char *argv[])
 {
@@ -42,8 +69,7 @@ int main(int argc, char *argv[])
     QString app_path = QCoreApplication::applicationDirPath();
     // 拼接文件名
     QString fileName = "config.ini";
-    QString config_path = QDir::toNativeSeparators(app_path +
-                                                   QDir::separator() + fileName);
+    QString config_path = FindConfigPath(fileName);
 
     QSettings settings(config_path, QSettings::IniFormat);
     QString gate_host = settings.value("GateServer/host").toString();
