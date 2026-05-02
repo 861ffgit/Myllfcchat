@@ -98,9 +98,9 @@ ChatDialog::ChatDialog(QWidget* parent) :
     connect(ui->user_info_page, &UserInfoPage::sig_reset_head, this, &ChatDialog::slot_reset_head);
 
     slot_reset_head();
-    ui->side_chat_lb->SetIconSize(QSize(20, 20));
-    ui->side_contact_lb->SetIconSize(QSize(20, 20));
-    ui->side_settings_lb->SetIconSize(QSize(20, 20));
+    ui->side_chat_lb->SetIconSize(QSize(22, 22));
+    ui->side_contact_lb->SetIconSize(QSize(22, 22));
+    ui->side_settings_lb->SetIconSize(QSize(22, 22));
     ui->side_chat_lb->setProperty("state", "normal");
 
     ui->side_chat_lb->SetState("normal", "hover", "pressed", "selected_normal", "selected_hover", "selected_pressed");
