@@ -26,6 +26,8 @@ constexpr char kContactIconSelected[] = {':','/','r','e','s','/','c','o','n','t'
 constexpr char kSettingsIcon[] = {':','/','r','e','s','/','s','e','t','t','i','n','g','s','.','p','n','g',0};
 constexpr char kSettingsIconHover[] = {':','/','r','e','s','/','s','e','t','t','i','n','g','s','_','h','o','v','e','r','.','p','n','g',0};
 constexpr char kSettingsIconSelected[] = {':','/','r','e','s','/','s','e','t','t','i','n','g','s','_','p','r','e','s','s','.','p','n','g',0};
+constexpr qreal kFrameInset = 1.0;
+constexpr qreal kFrameRadius = 9.0;
 
 QString sideBarIconPath(const QString &object_name, const QString &state_name)
 {
@@ -97,16 +99,17 @@ void StateWidget::paintEvent(QPaintEvent *event)
     painter.setRenderHint(QPainter::SmoothPixmapTransform, true);
 
     const QString state_name = property(kStateProperty).toString();
-    const QRectF background_rect = rect().adjusted(0.5, 0.5, -0.5, -0.5);
+    const QRectF background_rect = rect().adjusted(kFrameInset, kFrameInset,
+                                                   -kFrameInset, -kFrameInset);
 
     if (isSelectedSideBarState(state_name)) {
         painter.setPen(QPen(QColor(63, 107, 89, 217), 1));
         painter.setBrush(QColor(33, 65, 53));
-        painter.drawRoundedRect(background_rect, 10, 10);
+        painter.drawRoundedRect(background_rect, kFrameRadius, kFrameRadius);
     } else if (isActiveSideBarState(state_name)) {
         painter.setPen(Qt::NoPen);
         painter.setBrush(QColor(255, 255, 255, 31));
-        painter.drawRoundedRect(background_rect, 10, 10);
+        painter.drawRoundedRect(background_rect, kFrameRadius, kFrameRadius);
     }
 
     const QString icon_path = CurrentIconPath();

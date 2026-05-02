@@ -112,14 +112,14 @@
           <widget class="StateWidget" name="side_chat_lb" native="true">
           <property name="minimumSize">
            <size>
-             <width>36</width>
-             <height>36</height>
+             <width>38</width>
+             <height>38</height>
             </size>
           </property>
           <property name="maximumSize">
            <size>
-             <width>36</width>
-             <height>36</height>
+             <width>38</width>
+             <height>38</height>
             </size>
           </property>
           </widget>
@@ -128,14 +128,14 @@
           <widget class="StateWidget" name="side_contact_lb" native="true">
           <property name="minimumSize">
            <size>
-             <width>36</width>
-             <height>36</height>
+             <width>38</width>
+             <height>38</height>
             </size>
           </property>
           <property name="maximumSize">
            <size>
-             <width>36</width>
-             <height>36</height>
+             <width>38</width>
+             <height>38</height>
             </size>
           </property>
           </widget>
@@ -144,14 +144,14 @@
           <widget class="StateWidget" name="side_settings_lb" native="true">
           <property name="minimumSize">
            <size>
-             <width>36</width>
-             <height>36</height>
+             <width>38</width>
+             <height>38</height>
             </size>
           </property>
           <property name="maximumSize">
            <size>
-             <width>36</width>
-             <height>36</height>
+             <width>38</width>
+             <height>38</height>
             </size>
           </property>
           </widget>

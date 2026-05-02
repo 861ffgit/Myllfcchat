@@ -1702,41 +1702,6 @@ QWidget#ConUserItem {
     font-family: "Microsoft YaHei";
 }
 
-#side_chat_lb[state='normal'],
-#side_contact_lb[state='normal'],
-#side_settings_lb[state='normal'] {
-    background: transparent;
-    border-image: none;
-    border-radius: 10px;
-}
-
-#side_chat_lb[state='hover'],
-#side_contact_lb[state='hover'],
-#side_settings_lb[state='hover'],
-#side_chat_lb[state='pressed'],
-#side_contact_lb[state='pressed'],
-#side_settings_lb[state='pressed'] {
-    background: rgba(255, 255, 255, 0.12);
-    border-image: none;
-    border-radius: 10px;
-}
-
-#side_chat_lb[state='selected_normal'],
-#side_chat_lb[state='selected_hover'],
-#side_chat_lb[state='selected_pressed'],
-#side_contact_lb[state='selected_normal'],
-#side_contact_lb[state='selected_hover'],
-#side_contact_lb[state='selected_pressed'],
-#side_settings_lb[state='selected_normal'],
-#side_settings_lb[state='selected_hover'],
-#side_settings_lb[state='selected_pressed'] {
-    background: #214135;
-    border: 1px solid rgba(63, 107, 89, 0.85);
-    border-image: none;
-    border-radius: 10px;
-    padding: 0px;
-}
-
 QScrollBar:vertical {
     background: transparent;
     width: 6px;

@@ -25,7 +25,7 @@ public:
     void ShowRedPoint(bool show=true);
 
 protected:
-    void paintEvent(QPaintEvent* event);
+    void paintEvent(QPaintEvent* event) override;
     void resizeEvent(QResizeEvent *event) override;
 
     virtual void mousePressEvent(QMouseEvent *ev) override;
