@@ -1041,29 +1041,6 @@ LoadingDlg{
     border-radius: 20px; /* 璁剧疆鍦嗚 */
 }
 
-#con_user_list {
-    background-color: rgb(247,247,248);
-    border: none;
-}
-
-#con_user_list::item:selected {
-    background-color: #d3d7d4;
-    border: none;
-    outline: none;
-}
-
-#con_user_list::item:hover {
-    background-color: rgb(206,207,208);
-    border: none;
-    outline: none;
-}
-
-#con_user_list::focus {
-    border: none;
-    outline: none;
-}
-
-
 #GroupTipItem {
     background-color: #eaeaea;
     border: none;
@@ -1513,7 +1490,7 @@ QWidget#search_wid #add_btn[state='press'] {
 #chat_user_list::item:selected,
 #con_user_list::item:selected,
 #search_list::item:selected {
-    background-color: #dde5e8;
+    background-color: transparent;
     border: none;
     outline: none;
 }
@@ -1521,7 +1498,7 @@ QWidget#search_wid #add_btn[state='press'] {
 #chat_user_list::item:hover,
 #con_user_list::item:hover,
 #search_list::item:hover {
-    background-color: #e8edf1;
+    background-color: transparent;
     border: none;
     outline: none;
 }
@@ -1529,6 +1506,15 @@ QWidget#search_wid #add_btn[state='press'] {
 QWidget#ChatUserWid,
 QWidget#ConUserItem {
     background: transparent;
+}
+
+#con_user_list::item {
+    margin: 4px 8px;
+    border-radius: 12px;
+}
+
+#new_friend_item {
+    border-bottom: none;
 }
 
 #user_name_lb {

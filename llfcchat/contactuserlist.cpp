@@ -4,11 +4,33 @@
 #include "grouptipitem.h"
 #include "conuseritem.h"
 #include <QRandomGenerator>
+#include <QAbstractItemView>
+#include <QStyledItemDelegate>
 #include "tcpmgr.h"
 #include "usermgr.h"
 #include <QTimer>
 #include <QCoreApplication>
 #include "usermgr.h"
+
+namespace {
+class ContactItemDelegate final : public QStyledItemDelegate
+{
+public:
+    using QStyledItemDelegate::QStyledItemDelegate;
+
+    void paint(QPainter *painter, const QStyleOptionViewItem &option,
+               const QModelIndex &index) const override
+    {
+        QStyleOptionViewItem clean_option(option);
+        initStyleOption(&clean_option, index);
+        clean_option.state &= ~QStyle::State_Selected;
+        clean_option.state &= ~QStyle::State_HasFocus;
+        clean_option.state &= ~QStyle::State_MouseOver;
+        clean_option.showDecorationSelected = false;
+        QStyledItemDelegate::paint(painter, clean_option, index);
+    }
+};
+}
 
 ContactUserList::ContactUserList(QWidget *parent): _add_friend_item(nullptr)
     ,_load_pending(false)
@@ -22,6 +44,10 @@ ContactUserList::ContactUserList(QWidget *parent): _add_friend_item(nullptr)
     this->viewport()->setAutoFillBackground(false);
     this->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     this->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    this->setFocusPolicy(Qt::NoFocus);
+    this->setSelectionRectVisible(false);
+    this->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    this->setItemDelegate(new ContactItemDelegate(this));
     // 安装事件过滤器
     this->viewport()->installEventFilter(this);
 
@@ -36,6 +62,11 @@ ContactUserList::ContactUserList(QWidget *parent): _add_friend_item(nullptr)
     //链接自己点击同意认证后界面刷新
     connect(TcpMgr::GetInstance().get(), &TcpMgr::sig_auth_rsp,this,
             &ContactUserList::slot_auth_rsp);
+
+    connect(this, &QListWidget::currentItemChanged, this,
+            [this](QListWidgetItem *current, QListWidgetItem *) {
+                SyncSelectionState(current);
+            });
 }
 
 
@@ -66,6 +97,7 @@ void ContactUserList::addContactUserList()
     this->setItemWidget(add_item, _add_friend_item);
     //默认设置新的朋友申请条目被选中
     this->setCurrentItem(add_item);
+    SyncSelectionState(add_item);
 
     auto * groupCon = new GroupTipItem();
     groupCon->SetGroupTip(tr("联系人"));
@@ -103,6 +135,30 @@ void ContactUserList::addContactUserList()
         item->setSizeHint(con_user_wid->sizeHint());
         this->addItem(item);
         this->setItemWidget(item, con_user_wid);
+    }
+
+    SyncSelectionState(currentItem());
+}
+
+void ContactUserList::SyncSelectionState(QListWidgetItem *current)
+{
+    for (int i = 0; i < count(); ++i) {
+        QListWidgetItem *list_item = item(i);
+        if (!list_item) {
+            continue;
+        }
+
+        QWidget *widget = itemWidget(list_item);
+        if (!widget) {
+            continue;
+        }
+
+        auto con_item = qobject_cast<ConUserItem *>(widget);
+        if (!con_item) {
+            continue;
+        }
+
+        con_item->SetVisualSelected(list_item == current);
     }
 }
 
@@ -232,6 +288,7 @@ void ContactUserList::slot_add_auth_firend(std::shared_ptr<AuthInfo> auth_info)
     this->insertItem(index + 1, item);
 
     this->setItemWidget(item, con_user_wid);
+    SyncSelectionState(currentItem());
 
 }
 
@@ -259,6 +316,7 @@ void ContactUserList::slot_auth_rsp(std::shared_ptr<AuthRsp> auth_rsp)
     this->insertItem(index + 1, item);
 
     this->setItemWidget(item, con_user_wid);
+    SyncSelectionState(currentItem());
 
 }
 

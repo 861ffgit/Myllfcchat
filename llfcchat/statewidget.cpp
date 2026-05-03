@@ -27,7 +27,7 @@ constexpr char kSettingsIcon[] = {':','/','r','e','s','/','s','e','t','t','i','n
 constexpr char kSettingsIconHover[] = {':','/','r','e','s','/','s','e','t','t','i','n','g','s','_','h','o','v','e','r','.','p','n','g',0};
 constexpr char kSettingsIconSelected[] = {':','/','r','e','s','/','s','e','t','t','i','n','g','s','_','p','r','e','s','s','.','p','n','g',0};
 constexpr qreal kFrameInset = 1.0;
-constexpr qreal kFrameRadius = 9.0;
+constexpr qreal kFrameRadius = 10.0;
 
 QString sideBarIconPath(const QString &object_name, const QString &state_name)
 {
@@ -108,7 +108,7 @@ void StateWidget::paintEvent(QPaintEvent *event)
         painter.drawRoundedRect(background_rect, kFrameRadius, kFrameRadius);
     } else if (isActiveSideBarState(state_name)) {
         painter.setPen(Qt::NoPen);
-        painter.setBrush(QColor(255, 255, 255, 31));
+        painter.setBrush(QColor(196, 228, 208, 110));
         painter.drawRoundedRect(background_rect, kFrameRadius, kFrameRadius);
     }
 

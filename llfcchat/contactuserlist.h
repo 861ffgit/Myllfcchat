@@ -19,6 +19,7 @@ protected:
     bool eventFilter(QObject *watched, QEvent *event) override ;
 private:
     void addContactUserList();
+    void SyncSelectionState(QListWidgetItem *current = nullptr);
 
 public slots:
     void slot_item_clicked(QListWidgetItem *item);
